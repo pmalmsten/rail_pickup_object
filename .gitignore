@@ -1,0 +1,13 @@
+.cproject
+.project
+.pydevproject
+.svn
+.settings
+_gtest_from_src
+bin
+build
+lib
+msg_gen
+srv_gen
+src/rail_pickup_object
+cmake_install.cmake

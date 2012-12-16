@@ -1,0 +1,19 @@
+<launch>
+	<!-- Load simulated youbot -->
+	<include file="$(find rms_youbot_gazebo_environment)/launch/rms_youbot_gazebo_environment.launch" />
+
+	<!-- Object discovery -->
+	<include file="$(find rail_object_discovery)/launch/object_discovery.launch" >
+		<arg name="update_environment" value="false" /> <!-- Temporarily disable updating the environment for now -->
+		<arg name="update_state_cloud_timestamps" value="true" />
+		<arg name="sensor_topic" value="/youbot_base_kinect/youbot_base_kinect/rgb/points" />
+		<arg name="target_frame_id" value="base_link" />
+		<arg name="collision_object_topic" value="collision_object" />
+	</include>
+	
+	<!-- Load arm navigation-->
+	<include file="$(find youbot_arm_navigation)/launch/youbot_arm_navigation.launch" />
+	
+	<!-- Load poke cup -->
+	<node pkg="youbot_object_manipulation" type="poke_cup" name="poke_cup" />
+</launch>

@@ -1,0 +1,16 @@
+<package>
+  <description brief="rail_pickup_object">
+
+     rail_pickup_object
+
+  </description>
+  <author>Paul Malmsten</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/rail_pickup_object</url>
+  <depend package="roscpp"/>
+  <depend package="rail_object_discovery"/>
+
+</package>
+
+
